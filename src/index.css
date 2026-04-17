@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  --color-page: #fafafa;
+  --color-ink: #0f172a;
+  --color-ink-muted: #475569;
+  --color-surface: #ffffff;
+  --color-accent-gold: #c9a227;
+  --color-accent-gold-soft: #e8d48b;
+  --color-accent-blue: #2563eb;
+  --color-accent-blue-soft: #93c5fd;
+
+  --shadow-card: 0 4px 6px -1px rgb(15 23 42 / 0.06),
+    0 10px 24px -4px rgb(15 23 42 / 0.08);
+  --shadow-card-hover: 0 12px 32px -8px rgb(15 23 42 / 0.12),
+    0 4px 12px -2px rgb(15 23 42 / 0.08);
+  --shadow-glass: 0 8px 32px rgb(15 23 42 / 0.12);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-page font-sans text-ink antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-blue;
+  }
+}
